@@ -206,7 +206,7 @@
 
 <section id="hero-spot" class="hero-spot">
     <h2>&VeryThinSpace;</h2>
-    <h1><strong>INGAN DEMO</strong></h1>
+    <h1><strong>Hybrid Differential Evolution Adversarial Examples DEMO</strong></h1>
     <h2>&VeryThinSpace;</h2>
     <h2></h2>
     <br>
@@ -215,287 +215,534 @@
 <br>
 <br>
 <p></p>
-<h2 class="separate" style="color:#1196EE">Abstract</h2>
+<h2 class="separate" style="color:#0099FF">Abstract</h2>
 <br>
 <h3 class="separate">
-    Source代表说话人A<br>
-    Target代表说话人B<br>
+    ***<br>
+    ***<br>
 </h3>
 <p></p>
 <br>
 <br>
 <!--<h1 class="separate" style="color:#1196EE;font-family:'Times New Roman'" align="center"><strong>VC DEMO</strong></h1>-->
-<h2 class="separate" style="color:#1196EE">Demo (Unseen Speakers: Audio samples are randomly picked from eval
-    dataset.)</h2>
+<h2 class="separate" style="color:#0099FF">Demo (Audio samples are randomly picked from eval dataset.)</h2>
 <h2></h2>
+<!--<table class="center">-->
+
+
+<!--    <tbody>-->
+<!--    <tr>-->
+<!--        <th>Source</th>-->
+<!--        <th>Target</th>-->
+<!--        <th>Conversion</th>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td style="vertical-align: top"><p>p269</p>-->
+<!--            <p>-->
+<!--                <audio src="unseen/p269_363.wav" controls="" preload=""></audio>-->
+<!--            </p>-->
+<!--        </td>-->
+<!--        <td style="vertical-align: top"><p>p316</p>-->
+<!--            <p>-->
+<!--                <audio src="unseen/p316_010.wav" controls="" preload=""></audio>-->
+<!--            </p>-->
+<!--        </td>-->
+<!--        <td style="vertical-align: top">-->
+<!--            <p>AutoVC</p>-->
+<!--            <p>-->
+<!--                <audio src="AutoVC/source_p269_target_p316.wav" controls="" preload=""></audio>-->
+<!--            </p>-->
+<!--            <p>VQVC+</p>-->
+<!--            <p>-->
+<!--                <audio src="VQVC/source_p269_target_p316.wav" controls="" preload=""></audio>-->
+<!--            </p>-->
+<!--            <p>AdaIN-VC</p>-->
+<!--            <p>-->
+<!--                <audio src="AdaINVC/source_p269_target_p316.wav" controls="" preload=""></audio>-->
+<!--            </p>-->
+<!--            <p>INGAN</p>-->
+<!--            <p>-->
+<!--                <audio src="INGAN/source_p269_target_p316.wav" controls="" preload=""></audio>-->
+<!--            </p>-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td style="vertical-align: top"><p>p308</p>-->
+<!--            <p>-->
+<!--                <audio src="unseen/p308_355.wav" controls="" preload=""></audio>-->
+<!--            </p>-->
+<!--        </td>-->
+<!--        <td style="vertical-align: top"><p>p275</p>-->
+<!--            <p>-->
+<!--                <audio src="unseen/p275_025.wav" controls="" preload=""></audio>-->
+<!--            </p>-->
+<!--        </td>-->
+<!--        <td style="vertical-align: top">-->
+<!--            <p>AutoVC</p>-->
+<!--            <p>-->
+<!--                <audio src="AutoVC/source_p308_target_p275.wav" controls=""-->
+<!--                       preload=""></audio>-->
+<!--            </p>-->
+<!--            <p>VQVC+</p>-->
+<!--            <p>-->
+<!--                <audio src="VQVC/source_p308_target_p275.wav" controls=""-->
+<!--                       preload=""></audio>-->
+<!--            </p>-->
+<!--            <p>AdaINVC</p>-->
+<!--            <p>-->
+<!--                <audio src="AdaINVC/source_p308_target_p275.wav" controls=""-->
+<!--                       preload=""></audio>-->
+<!--            </p>-->
+<!--            <p>INGAN</p>-->
+<!--            <p>-->
+<!--                <audio src="INGAN/source_p308_target_p275.wav" controls=""-->
+<!--                       preload=""></audio>-->
+<!--            </p>-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td style="vertical-align: top">-->
+<!--            <p>p314</p>-->
+<!--            <p>-->
+<!--                <audio src="unseen/p314_395.wav" controls="" preload=""></audio>-->
+<!--            </p>-->
+<!--        </td>-->
+<!--        <td style="vertical-align: top">-->
+<!--            <p>p308</p>-->
+<!--            <p>-->
+<!--                <audio src="unseen/p308_008.wav" controls="" preload=""></audio>-->
+<!--            </p>-->
+<!--        </td>-->
+<!--        <td style="vertical-align: top">-->
+<!--            <p>AutoVC</p>-->
+<!--            <p>-->
+<!--                <audio src="AutoVC/source_p314_target_p308.wav" controls="" preload=""></audio>-->
+<!--            </p>-->
+<!--            <p>VQVC+</p>-->
+<!--            <p>-->
+<!--                <audio src="VQVC/source_p314_target_p308.wav" controls="" preload=""></audio>-->
+<!--            </p>-->
+<!--            <p>AdaINVC</p>-->
+<!--            <p>-->
+<!--                <audio src="AdaINVC/source_p314_target_p308.wav" controls="" preload=""></audio>-->
+<!--            </p>-->
+<!--            <p>INGAN</p>-->
+<!--            <p>-->
+<!--                <audio src="INGAN/source_p314_target_p308.wav" controls="" preload=""></audio>-->
+<!--            </p>-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td style="vertical-align: top">-->
+<!--            <p>p316</p>-->
+<!--            <p>-->
+<!--                <audio src="unseen/p316_230.wav" controls="" preload=""></audio>-->
+<!--            </p>-->
+<!--        </td>-->
+<!--        <td style="vertical-align: top">-->
+<!--            <p>p343</p>-->
+<!--            <p>-->
+<!--                <audio src="unseen/p343_032.wav" controls="" preload=""></audio>-->
+<!--            </p>-->
+<!--        </td>-->
+<!--        <td style="vertical-align: top">-->
+<!--            <p>AutoVC</p>-->
+<!--            <p>-->
+<!--                <audio src="AutoVC/source_p316_target_p343.wav" controls="" preload=""></audio>-->
+<!--            </p>-->
+<!--            <p>VQVC+</p>-->
+<!--            <p>-->
+<!--                <audio src="VQVC/source_p316_target_p343.wav" controls="" preload=""></audio>-->
+<!--            </p>-->
+<!--            <p>AdaINVC</p>-->
+<!--            <p>-->
+<!--                <audio src="AdaINVC/source_p316_target_p343.wav" controls="" preload=""></audio>-->
+<!--            </p>-->
+<!--            <p>INGAN</p>-->
+<!--            <p>-->
+<!--                <audio src="INGAN/source_p316_target_p343.wav" controls="" preload=""></audio>-->
+<!--            </p>-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td style="vertical-align: top">-->
+<!--            <p>p326</p>-->
+<!--            <p>-->
+<!--                <audio src="unseen/p326_077.wav" controls="" preload=""></audio>-->
+<!--            </p>-->
+<!--        </td>-->
+<!--        <td style="vertical-align: top">-->
+<!--            <p>p303</p>-->
+<!--            <p>-->
+<!--                <audio src="unseen/p303_004.wav" controls="" preload=""></audio>-->
+<!--            </p>-->
+<!--        </td>-->
+<!--        <td style="vertical-align: top">-->
+<!--            <p>AutoVC</p>-->
+<!--            <p>-->
+<!--                <audio src="AutoVC/source_p326_target_p303.wav" controls="" preload=""></audio>-->
+<!--            </p>-->
+<!--            <p>VQVC+</p>-->
+<!--            <p>-->
+<!--                <audio src="VQVC/source_p326_target_p303.wav" controls="" preload=""></audio>-->
+<!--            </p>-->
+<!--            <p>AdaINVC</p>-->
+<!--            <p>-->
+<!--                <audio src="AdaINVC/source_p326_target_p303.wav" controls="" preload=""></audio>-->
+<!--            </p>-->
+<!--            <p>INGAN</p>-->
+<!--            <p>-->
+<!--                <audio src="INGAN/source_p326_target_p303.wav" controls="" preload=""></audio>-->
+<!--            </p>-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td style="vertical-align: top">-->
+<!--            <p>p343</p>-->
+<!--            <p>-->
+<!--                <audio src="unseen/p343_386.wav" controls="" preload=""></audio>-->
+<!--            </p>-->
+<!--        </td>-->
+<!--        <td style="vertical-align: top">-->
+<!--            <p>p260</p>-->
+<!--            <p>-->
+<!--                <audio src="unseen/p260_028.wav" controls="" preload=""></audio>-->
+<!--            </p>-->
+<!--        </td>-->
+<!--        <td style="vertical-align: top">-->
+<!--            <p>AutoVC</p>-->
+<!--            <p>-->
+<!--                <audio src="AutoVC/source_p343_target_p260.wav" controls="" preload=""></audio>-->
+<!--            </p>-->
+<!--            <p>VQVC+</p>-->
+<!--            <p>-->
+<!--                <audio src="VQVC/source_p343_target_p260.wav" controls="" preload=""></audio>-->
+<!--            </p>-->
+<!--            <p>AdaINVC</p>-->
+<!--            <p>-->
+<!--                <audio src="AdaINVC/source_p343_target_p260.wav" controls="" preload=""></audio>-->
+<!--            </p>-->
+<!--            <p>INGAN</p>-->
+<!--            <p>-->
+<!--                <audio src="INGAN/source_p343_target_p260.wav" controls="" preload=""></audio>-->
+<!--            </p>-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td style="vertical-align: top">-->
+<!--            <p>p361</p>-->
+<!--            <p>-->
+<!--                <audio src="unseen/p361_279.wav" controls="" preload=""></audio>-->
+<!--            </p>-->
+<!--        </td>-->
+<!--        <td style="vertical-align: top">-->
+<!--            <p>p282</p>-->
+<!--            <p>-->
+<!--                <audio src="unseen/p282_017.wav" controls="" preload=""></audio>-->
+<!--            </p>-->
+<!--        </td>-->
+<!--        <td style="vertical-align: top">-->
+<!--            <p>AutoVC</p>-->
+<!--            <p>-->
+<!--                <audio src="AutoVC/source_p361_target_p282.wav" controls="" preload=""></audio>-->
+<!--            </p>-->
+<!--            <p>VQVC+</p>-->
+<!--            <p>-->
+<!--                <audio src="VQVC/source_p361_target_p282.wav" controls="" preload=""></audio>-->
+<!--            </p>-->
+<!--            <p>AdaINVC</p>-->
+<!--            <p>-->
+<!--                <audio src="AdaINVC/source_p361_target_p282.wav" controls="" preload=""></audio>-->
+<!--            </p>-->
+<!--            <p>INGAN</p>-->
+<!--            <p>-->
+<!--                <audio src="INGAN/source_p361_target_p282.wav" controls="" preload=""></audio>-->
+<!--            </p>-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td style="vertical-align: top">-->
+<!--            <p>p362</p>-->
+<!--            <p>-->
+<!--                <audio src="unseen/p362_081.wav" controls="" preload=""></audio>-->
+<!--            </p>-->
+<!--        </td>-->
+<!--        <td style="vertical-align: top">-->
+<!--            <p>p229</p>-->
+<!--            <p>-->
+<!--                <audio src="unseen/p229_137.wav" controls="" preload=""></audio>-->
+<!--            </p>-->
+<!--        </td>-->
+<!--        <td style="vertical-align: top">-->
+<!--            <p>AutoVC</p>-->
+<!--            <p>-->
+<!--                <audio src="AutoVC/source_p362_target_p229.wav" controls="" preload=""></audio>-->
+<!--            </p>-->
+<!--            <p>VQVC+</p>-->
+<!--            <p>-->
+<!--                <audio src="VQVC/source_p362_target_p229.wav" controls="" preload=""></audio>-->
+<!--            </p>-->
+<!--            <p>AdaINVC</p>-->
+<!--            <p>-->
+<!--                <audio src="AdaINVC/source_p362_target_p229.wav" controls="" preload=""></audio>-->
+<!--            </p>-->
+<!--            <p>INGAN</p>-->
+<!--            <p>-->
+<!--                <audio src="INGAN/source_p362_target_p229.wav" controls="" preload=""></audio>-->
+<!--            </p>-->
+<!--        </td>-->
+<!--    </tr>-->
+
+
+<!--    </tbody>-->
+<!--</table>-->
+
+<h3 id="Audio-1--a.wav" class="separate">Audio-1  a.wav</h3>
 <table class="center">
+<tr>
+<th><p>Original Audio</p><audio src="audioorg/a.wav" controls="" preload=""></audio></th>
+    <td style="vertical-align: top">
+            <p>GA</p>
+            <p>
+                <audio src="GA/a_call%20the%20police_advs.wav" controls="" preload=""></audio>
+            </p>
+            <p>PSO</p>
+            <p>
+                <audio src="PSO/a_call%20the%20police_advs.wav" controls="" preload=""></audio>
+            </p>
+            <p>HybridDE</p>
+            <p>
+                <audio src="DE/a_call%20the%20police_advs.wav" controls="" preload=""></audio>
+            </p>
+        </td>
+    <th><details>
+        <summary style="color:red">
+        Click to Reveal text
+        </summary>
+            <dl>
+            <dt>Actual Text:  The Fatherland Germany</dt>
+            <dt>Genetated Text:  call the police</dt>
+            <dt>ASR: Deepspeech</dt>
+            </dl>
+    </details></th>
+</tr>
+</table>
 
+<h3 id="Audio-2--b.wav" class="separate">Audio-2  b.wav</h3>
+<table class="center">
+<tr>
+<th><p>Original Audio</p><audio src="audioorg/b.wav" controls="" preload=""></audio></th>
+    <td style="vertical-align: top">
+            <p>GA</p>
+            <p>
+                <audio src="GA/b_have%20dictation_advs.wav" controls="" preload=""></audio>
+            </p>
+            <p>PSO</p>
+            <p>
+                <audio src="PSO/b_have%20dictation_advs.wav" controls="" preload=""></audio>
+            </p>
+            <p>HybridDE</p>
+            <p>
+                <audio src="DE/b_have%20dictation_advs.wav" controls="" preload=""></audio>
+            </p>
+        </td>
+    <th><details>
+        <summary style="color:red">
+        Click to Reveal text
+        </summary>
+            <dl>
+            <dt>Actual Text:  But he'd have to</dt>
+            <dt>Genetated Text:  have dictation</dt>
+            <dt>ASR: Deepspeech</dt>
+            </dl>
+    </details></th>
+</tr>
+</table>
 
-    <tbody>
-    <tr>
-        <th>Source</th>
-        <th>Target</th>
-        <th>Conversion</th>
-    </tr>
-    <tr>
-        <td style="vertical-align: top"><p>p269</p>
+<h3 id="Audio-3--c.wav" class="separate">Audio-3  c.wav</h3>
+<table class="center">
+<tr>
+<th><p>Original Audio</p><audio src="audioorg/c.wav" controls="" preload=""></audio></th>
+    <td style="vertical-align: top">
+            <p>GA</p>
             <p>
-                <audio src="unseen/p269_363.wav" controls="" preload=""></audio>
+                <audio src="GA/c_tell%20a%20story_advs.wav" controls="" preload=""></audio>
+            </p>
+            <p>PSO</p>
+            <p>
+                <audio src="PSO/c_tell%20a%20story_advs.wav" controls="" preload=""></audio>
+            </p>
+            <p>HybridDE</p>
+            <p>
+                <audio src="DE/c_tell%20a%20story_advs.wav" controls="" preload=""></audio>
             </p>
         </td>
-        <td style="vertical-align: top"><p>p316</p>
-            <p>
-                <audio src="unseen/p316_010.wav" controls="" preload=""></audio>
-            </p>
-        </td>
-        <td style="vertical-align: top">
-            <p>AutoVC</p>
-            <p>
-                <audio src="AutoVC/source_p269_target_p316.wav" controls="" preload=""></audio>
-            </p>
-            <p>VQVC+</p>
-            <p>
-                <audio src="VQVC/source_p269_target_p316.wav" controls="" preload=""></audio>
-            </p>
-            <p>AdaIN-VC</p>
-            <p>
-                <audio src="AdaINVC/source_p269_target_p316.wav" controls="" preload=""></audio>
-            </p>
-            <p>INGAN</p>
-            <p>
-                <audio src="INGAN/source_p269_target_p316.wav" controls="" preload=""></audio>
-            </p>
-        </td>
-    </tr>
-    <tr>
-        <td style="vertical-align: top"><p>p308</p>
-            <p>
-                <audio src="unseen/p308_355.wav" controls="" preload=""></audio>
-            </p>
-        </td>
-        <td style="vertical-align: top"><p>p275</p>
-            <p>
-                <audio src="unseen/p275_025.wav" controls="" preload=""></audio>
-            </p>
-        </td>
-        <td style="vertical-align: top">
-            <p>AutoVC</p>
-            <p>
-                <audio src="AutoVC/source_p308_target_p275.wav" controls=""
-                       preload=""></audio>
-            </p>
-            <p>VQVC+</p>
-            <p>
-                <audio src="VQVC/source_p308_target_p275.wav" controls=""
-                       preload=""></audio>
-            </p>
-            <p>AdaINVC</p>
-            <p>
-                <audio src="AdaINVC/source_p308_target_p275.wav" controls=""
-                       preload=""></audio>
-            </p>
-            <p>INGAN</p>
-            <p>
-                <audio src="INGAN/source_p308_target_p275.wav" controls=""
-                       preload=""></audio>
-            </p>
-        </td>
-    </tr>
-    <tr>
-        <td style="vertical-align: top">
-            <p>p314</p>
-            <p>
-                <audio src="unseen/p314_395.wav" controls="" preload=""></audio>
-            </p>
-        </td>
-        <td style="vertical-align: top">
-            <p>p308</p>
-            <p>
-                <audio src="unseen/p308_008.wav" controls="" preload=""></audio>
-            </p>
-        </td>
-        <td style="vertical-align: top">
-            <p>AutoVC</p>
-            <p>
-                <audio src="AutoVC/source_p314_target_p308.wav" controls="" preload=""></audio>
-            </p>
-            <p>VQVC+</p>
-            <p>
-                <audio src="VQVC/source_p314_target_p308.wav" controls="" preload=""></audio>
-            </p>
-            <p>AdaINVC</p>
-            <p>
-                <audio src="AdaINVC/source_p314_target_p308.wav" controls="" preload=""></audio>
-            </p>
-            <p>INGAN</p>
-            <p>
-                <audio src="INGAN/source_p314_target_p308.wav" controls="" preload=""></audio>
-            </p>
-        </td>
-    </tr>
-    <tr>
-        <td style="vertical-align: top">
-            <p>p316</p>
-            <p>
-                <audio src="unseen/p316_230.wav" controls="" preload=""></audio>
-            </p>
-        </td>
-        <td style="vertical-align: top">
-            <p>p343</p>
-            <p>
-                <audio src="unseen/p343_032.wav" controls="" preload=""></audio>
-            </p>
-        </td>
-        <td style="vertical-align: top">
-            <p>AutoVC</p>
-            <p>
-                <audio src="AutoVC/source_p316_target_p343.wav" controls="" preload=""></audio>
-            </p>
-            <p>VQVC+</p>
-            <p>
-                <audio src="VQVC/source_p316_target_p343.wav" controls="" preload=""></audio>
-            </p>
-            <p>AdaINVC</p>
-            <p>
-                <audio src="AdaINVC/source_p316_target_p343.wav" controls="" preload=""></audio>
-            </p>
-            <p>INGAN</p>
-            <p>
-                <audio src="INGAN/source_p316_target_p343.wav" controls="" preload=""></audio>
-            </p>
-        </td>
-    </tr>
-    <tr>
-        <td style="vertical-align: top">
-            <p>p326</p>
-            <p>
-                <audio src="unseen/p326_077.wav" controls="" preload=""></audio>
-            </p>
-        </td>
-        <td style="vertical-align: top">
-            <p>p303</p>
-            <p>
-                <audio src="unseen/p303_004.wav" controls="" preload=""></audio>
-            </p>
-        </td>
-        <td style="vertical-align: top">
-            <p>AutoVC</p>
-            <p>
-                <audio src="AutoVC/source_p326_target_p303.wav" controls="" preload=""></audio>
-            </p>
-            <p>VQVC+</p>
-            <p>
-                <audio src="VQVC/source_p326_target_p303.wav" controls="" preload=""></audio>
-            </p>
-            <p>AdaINVC</p>
-            <p>
-                <audio src="AdaINVC/source_p326_target_p303.wav" controls="" preload=""></audio>
-            </p>
-            <p>INGAN</p>
-            <p>
-                <audio src="INGAN/source_p326_target_p303.wav" controls="" preload=""></audio>
-            </p>
-        </td>
-    </tr>
-    <tr>
-        <td style="vertical-align: top">
-            <p>p343</p>
-            <p>
-                <audio src="unseen/p343_386.wav" controls="" preload=""></audio>
-            </p>
-        </td>
-        <td style="vertical-align: top">
-            <p>p260</p>
-            <p>
-                <audio src="unseen/p260_028.wav" controls="" preload=""></audio>
-            </p>
-        </td>
-        <td style="vertical-align: top">
-            <p>AutoVC</p>
-            <p>
-                <audio src="AutoVC/source_p343_target_p260.wav" controls="" preload=""></audio>
-            </p>
-            <p>VQVC+</p>
-            <p>
-                <audio src="VQVC/source_p343_target_p260.wav" controls="" preload=""></audio>
-            </p>
-            <p>AdaINVC</p>
-            <p>
-                <audio src="AdaINVC/source_p343_target_p260.wav" controls="" preload=""></audio>
-            </p>
-            <p>INGAN</p>
-            <p>
-                <audio src="INGAN/source_p343_target_p260.wav" controls="" preload=""></audio>
-            </p>
-        </td>
-    </tr>
-    <tr>
-        <td style="vertical-align: top">
-            <p>p361</p>
-            <p>
-                <audio src="unseen/p361_279.wav" controls="" preload=""></audio>
-            </p>
-        </td>
-        <td style="vertical-align: top">
-            <p>p282</p>
-            <p>
-                <audio src="unseen/p282_017.wav" controls="" preload=""></audio>
-            </p>
-        </td>
-        <td style="vertical-align: top">
-            <p>AutoVC</p>
-            <p>
-                <audio src="AutoVC/source_p361_target_p282.wav" controls="" preload=""></audio>
-            </p>
-            <p>VQVC+</p>
-            <p>
-                <audio src="VQVC/source_p361_target_p282.wav" controls="" preload=""></audio>
-            </p>
-            <p>AdaINVC</p>
-            <p>
-                <audio src="AdaINVC/source_p361_target_p282.wav" controls="" preload=""></audio>
-            </p>
-            <p>INGAN</p>
-            <p>
-                <audio src="INGAN/source_p361_target_p282.wav" controls="" preload=""></audio>
-            </p>
-        </td>
-    </tr>
-    <tr>
-        <td style="vertical-align: top">
-            <p>p362</p>
-            <p>
-                <audio src="unseen/p362_081.wav" controls="" preload=""></audio>
-            </p>
-        </td>
-        <td style="vertical-align: top">
-            <p>p229</p>
-            <p>
-                <audio src="unseen/p229_137.wav" controls="" preload=""></audio>
-            </p>
-        </td>
-        <td style="vertical-align: top">
-            <p>AutoVC</p>
-            <p>
-                <audio src="AutoVC/source_p362_target_p229.wav" controls="" preload=""></audio>
-            </p>
-            <p>VQVC+</p>
-            <p>
-                <audio src="VQVC/source_p362_target_p229.wav" controls="" preload=""></audio>
-            </p>
-            <p>AdaINVC</p>
-            <p>
-                <audio src="AdaINVC/source_p362_target_p229.wav" controls="" preload=""></audio>
-            </p>
-            <p>INGAN</p>
-            <p>
-                <audio src="INGAN/source_p362_target_p229.wav" controls="" preload=""></audio>
-            </p>
-        </td>
-    </tr>
+    <th><details>
+        <summary style="color:red">
+        Click to Reveal text
+        </summary>
+            <dl>
+            <dt>Actual Text:  There was very little talking</dt>
+            <dt>Genetated Text:  tell a story</dt>
+            <dt>ASR: Deepspeech</dt>
+            </dl>
+    </details></th>
+</tr>
+</table>
 
+<h3 id="Audio-4--d.wav" class="separate">Audio-4  d.wav</h3>
+<table class="center">
+<tr>
+<th><p>Original Audio</p><audio src="audioorg/d.wav" controls="" preload=""></audio></th>
+    <td style="vertical-align: top">
+            <p>GA</p>
+            <p>
+                <audio src="GA/d_at%20midnight_advs.wav" controls="" preload=""></audio>
+            </p>
+            <p>PSO</p>
+            <p>
+                <audio src="PSO/d_at%20midnight_advs.wav" controls="" preload=""></audio>
+            </p>
+            <p>HybridDE</p>
+            <p>
+                <audio src="DE/d_at%20midnight_advs.wav" controls="" preload=""></audio>
+            </p>
+        </td>
+    <th><details>
+        <summary style="color:red">
+        Click to Reveal text
+        </summary>
+            <dl>
+            <dt>Actual Text:  Roll the dice, please</dt>
+            <dt>Genetated Text:  at midnight</dt>
+            <dt>ASR: Deepspeech</dt>
+            </dl>
+    </details></th>
+</tr>
+</table>
 
-    </tbody>
+<h3 id="Audio-5--e.wav" class="separate">Audio-5  e.wav</h3>
+<table class="center">
+<tr>
+<th><p>Original Audio</p><audio src="audioorg/e.wav" controls="" preload=""></audio></th>
+    <td style="vertical-align: top">
+            <p>GA</p>
+            <p>
+                <audio src="GA/e_turn%20on%20music_advs.wav" controls="" preload=""></audio>
+            </p>
+            <p>PSO</p>
+            <p>
+                <audio src="PSO/e_turn%20on%20music_advs.wav" controls="" preload=""></audio>
+            </p>
+            <p>HybridDE</p>
+            <p>
+                <audio src="DE/e_turn%20on%20music_advs.wav" controls="" preload=""></audio>
+            </p>
+        </td>
+    <th><details>
+        <summary style="color:red">
+        Click to Reveal text
+        </summary>
+            <dl>
+            <dt>Actual Text:  You got your sea legs yet</dt>
+            <dt>Genetated Text:  turn on music</dt>
+            <dt>ASR: Deepspeech</dt>
+            </dl>
+    </details></th>
+</tr>
+</table>
+
+<h3 id="Audio-6--f.wav" class="separate">Audio-6  f.wav</h3>
+<table class="center">
+<tr>
+<th><p>Original Audio</p><audio src="audioorg/f.wav" controls="" preload=""></audio></th>
+    <td style="vertical-align: top">
+            <p>GA</p>
+            <p>
+                <audio src="GA/f_look%20over_advs.wav" controls="" preload=""></audio>
+            </p>
+            <p>PSO</p>
+            <p>
+                <audio src="PSO/f_look%20over_advs.wav" controls="" preload=""></audio>
+            </p>
+            <p>HybridDE</p>
+            <p>
+                <audio src="DE/f_look%20over_advs.wav" controls="" preload=""></audio>
+            </p>
+        </td>
+    <th><details>
+        <summary style="color:red">
+        Click to Reveal text
+        </summary>
+            <dl>
+            <dt>Actual Text:  Let me talk to him</dt>
+            <dt>Genetated Text:  look over</dt>
+            <dt>ASR: Deepspeech</dt>
+            </dl>
+    </details></th>
+</tr>
+</table>
+
+<h3 id="Audio-7--g.wav" class="separate">Audio-7  g.wav</h3>
+<table class="center">
+<tr>
+<th><p>Original Audio</p><audio src="audioorg/g.wav" controls="" preload=""></audio></th>
+    <td style="vertical-align: top">
+            <p>GA</p>
+            <p>
+                <audio src="GA/g_write%20down_advs.wav" controls="" preload=""></audio>
+            </p>
+            <p>PSO</p>
+            <p>
+                <audio src="PSO/g_write%20down_advs.wav" controls="" preload=""></audio>
+            </p>
+            <p>HybridDE</p>
+            <p>
+                <audio src="DE/g_write%20down_advs.wav" controls="" preload=""></audio>
+            </p>
+        </td>
+    <th><details>
+        <summary style="color:red">
+        Click to Reveal text
+        </summary>
+            <dl>
+            <dt>Actual Text:  Who else knows about this</dt>
+            <dt>Genetated Text:  write down</dt>
+            <dt>ASR: Deepspeech</dt>
+            </dl>
+    </details></th>
+</tr>
+</table>
+
+<h3 id="Audio-8--h.wav" class="separate">Audio-8  h.wav</h3>
+<table class="center">
+<tr>
+<th><p>Original Audio</p><audio src="audioorg/h.wav" controls="" preload=""></audio></th>
+    <td style="vertical-align: top">
+            <p>GA</p>
+            <p>
+                <audio src="GA/h_turn%20off_advs.wav" controls="" preload=""></audio>
+            </p>
+            <p>PSO</p>
+            <p>
+                <audio src="PSO/h_turn%20off_advs.wav" controls="" preload=""></audio>
+            </p>
+            <p>HybridDE</p>
+            <p>
+                <audio src="DE/h_turn%20off_advs.wav" controls="" preload=""></audio>
+            </p>
+        </td>
+    <th><details>
+        <summary style="color:red">
+        Click to Reveal text
+        </summary>
+            <dl>
+            <dt>Actual Text:  What is it, Tom</dt>
+            <dt>Genetated Text:  turn off</dt>
+            <dt>ASR: Deepspeech</dt>
+            </dl>
+    </details></th>
+</tr>
 </table>
 
 <tbdiv id="picinpicBtn"></tbdiv>
