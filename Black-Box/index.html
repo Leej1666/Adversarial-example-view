@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+<script id="MathJax-script" async src="https://cdn.
+jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 <head>
     <link type="text/css" href="style.css" media="all" rel="stylesheet">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -206,7 +209,7 @@
 
 <section id="hero-spot" class="hero-spot">
     <h2>&VeryThinSpace;</h2>
-    <h1><strong>Hybrid Differential Evolution Adversarial Examples DEMO</strong></h1>
+    <h1><strong>Differential Evolution Gradient Algorithm (DE-gradient) Adversarial Examples DEMO</strong></h1>
     <h2>&VeryThinSpace;</h2>
     <h2></h2>
     <br>
@@ -218,10 +221,26 @@
 <h2 class="separate" style="color:#0099FF">Abstract</h2>
 <br>
 <h3 class="separate">
-    Deep neural networks are widely used in speech recognition systems. However, systems that use these networks are vulnerable to adversarial attacks. Current adversarial attack methods focus on targeted white-box attacks and untargeted black-box attacks. A few targeted black-box attacks have relatively low success rates. In this study, we propose a hybrid differential evolution algorithm to achieve a targeted adversarial attack. Moreover, we designed a technique that mimics the original audio waveform to modulate adversarial noise, leading to near-imperceptible examples. Our method improves the success rate of black-box attacks by 19% and increases the signal-to-noise ratio of silent parts from 27 to 54 dB.<br>
+    The susceptibility of DNNs to adversarial attacks in Automatic Speech Recognition (ASR) systems has gained many concerns in recent years. Current work on generating adversarial attacks for ASR systems has focused on white-box methods under a fallacious assumption that the architecture and parameters of a DNN model are known. While limited black-box attack methods have been proposed in recent years, they mainly rely on a query-based manner. Typically, the query-based black-box attack mixes a genetic algorithm (GA) with gradient estimation (GE), in which the GA provides a global search to explore the target space and the GE provides a local search when an adversarial sample nears its target perturbation. However, experiments show that the existing query-based methods fail to find any adversarial example for long audio samples in an ASR system. The traditional GA is frequently stuck in some local regions without any adversarial example in a huge search space. This paper proposes a new black-box approach, called DE-gradient, by introducing the differential evolution (DE) that is a population-based search algorithm. We compared DE-gradient with two black-box attack methods on two public audio datasets. Experimental results show that DE-gradient improves the success rate of attacks by 19% and increases the signal-to-noise ratio (SNR) of silent sections from 27 dB to 54 dB. DE-gradient can provide a good baseline for evaluating the black-box adversarial attack of ASR systems.<br>
 <!--    ***<br>-->
 </h3>
-<p></p>
+<br>
+<h3 class="separate" style="color:#0099FF">Introduction</h3>
+<h3 class="separate">Welcome! On this page, we demonstrate our DE-gradient algorithm alongside two other attack methods (GA-gradient and PSO) as applied to eight audio samples from the Mozilla Common Voice dataset. We provide explanations of the metrics and corresponding audio samples for listening in the subsequent content.</h3>
+<br>
+<h3 class="separate" style="color:#0099FF">Metrics</h3>
+<br>
+
+<p class="separate"><b>Speech Similarity.</b> We use the Pearson correlation to measure the similarity between adversarial examples and the original samples. Given the speech samples \( x \) and its adversarial samples \( x_{adv} \), the formula of correlation coefficient \( \rho \) is: \[ \rho_{x,x_{adv}} = \frac{cov(x,x_{adv})}{\delta_x\delta_{adv}}, \]
+where \( cov(\cdot) \) represents the covariance between the original speech samples and the adversarial examples, and \( \delta_x \) (\( \delta_{adv} \)) represents the standard deviation of the samples (the adversarial examples \( x_{adv} \)). A higher \( \rho \) indicates that the generated adversarial examples are more similar to the original audio samples.
+<br><br>
+<b>Running Time.</b>
+The running time \( t \) of each algorithm is given by \( t_e-t_b \), where \( t_b \) and \( t_e \) are the start time and the end time, respectively.
+<br><br>
+<b>Signal-to-Noise Ratio.</b> We use the signal-to-noise ratio (SNR) to analyze the difference between the original audio and the adversarial example in the silent part. The formula of SNR is \[ SNR = 10\log_{10}(\frac{P_{signal}}{P_{noise}}), \]
+where \( P_{signal} \) is the power of the original audio, and \( P_{noise} \) is the power of the adversarial noise over each adversarial example. A large \( SNR \) value indicates a small noise scale. We selected 0.1 seconds from the head of each audio adversarial example with two datasets as the silent part.
+</p>
+
 <br>
 <br>
 <!--<h1 class="separate" style="color:#1196EE;font-family:'Times New Roman'" align="center"><strong>VC DEMO</strong></h1>-->
@@ -510,7 +529,7 @@
             <p>
                 <audio src="PSO/a_call%20the%20police_advs.wav" controls="" preload=""></audio>
             </p>
-            <p>HybridDE</p>
+            <p>DE-gradient</p>
             <p>
                 <audio src="DE/a_call%20the%20police_advs.wav" controls="" preload=""></audio>
             </p>
@@ -524,6 +543,29 @@
             <dt>Targeted Phrase:  call the police</dt>
             <dt>ASR: Deepspeech</dt>
             </dl>
+        <table>
+          <colgroup>
+            <col width="60" />
+            <col width="120" span="2"/>
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Method</th><th>Speech similarity(%)</th><th>Running time(s)</th><th>SNR(dB)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>GA</td><td>99.6</td><td>970</td><td>35</td>
+            </tr>
+            <tr>
+              <td>PSO</td><td>97.7</td><td>1198</td><td>27</td>
+            </tr>
+            <tr>
+              <td>DE-gradient</td><td>98.1</td><td>627</td><td>40</td>
+            </tr>
+          </tbody>
+        </table>
+
     </details></th>
 </tr>
 </table>
@@ -541,7 +583,7 @@
             <p>
                 <audio src="PSO/b_have%20dictation_advs.wav" controls="" preload=""></audio>
             </p>
-            <p>HybridDE</p>
+            <p>DE-gradient</p>
             <p>
                 <audio src="DE/b_have%20dictation_advs.wav" controls="" preload=""></audio>
             </p>
@@ -555,6 +597,28 @@
             <dt>Targeted Phrase:  have dictation</dt>
             <dt>ASR: Deepspeech</dt>
             </dl>
+        <table>
+          <colgroup>
+            <col width="60" />
+            <col width="120" span="2"/>
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Method</th><th>Speech similarity(%)</th><th>Running time(s)</th><th>SNR(dB)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>GA</td><td>95.7</td><td>652</td><td>25</td>
+            </tr>
+            <tr>
+              <td>PSO</td><td>92.9</td><td>1466</td><td>22</td>
+            </tr>
+            <tr>
+              <td>DE-gradient</td><td>98.5</td><td>685</td><td>63</td>
+            </tr>
+          </tbody>
+        </table>
     </details></th>
 </tr>
 </table>
@@ -572,7 +636,7 @@
             <p>
                 <audio src="PSO/c_tell%20a%20story_advs.wav" controls="" preload=""></audio>
             </p>
-            <p>HybridDE</p>
+            <p>DE-gradient</p>
             <p>
                 <audio src="DE/c_tell%20a%20story_advs.wav" controls="" preload=""></audio>
             </p>
@@ -586,6 +650,28 @@
             <dt>Targeted Phrase:  tell a story</dt>
             <dt>ASR: Deepspeech</dt>
             </dl>
+        <table>
+          <colgroup>
+            <col width="60" />
+            <col width="120" span="2"/>
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Method</th><th>Speech similarity(%)</th><th>Running time(s)</th><th>SNR(dB)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>GA</td><td>91.1</td><td>214</td><td>25</td>
+            </tr>
+            <tr>
+              <td>PSO</td><td>92.2</td><td>1005</td><td>22</td>
+            </tr>
+            <tr>
+              <td>DE-gradient</td><td>98.9</td><td>951</td><td>51</td>
+            </tr>
+          </tbody>
+        </table>
     </details></th>
 </tr>
 </table>
@@ -603,7 +689,7 @@
             <p>
                 <audio src="PSO/d_at%20midnight_advs.wav" controls="" preload=""></audio>
             </p>
-            <p>HybridDE</p>
+            <p>DE-gradient</p>
             <p>
                 <audio src="DE/d_at%20midnight_advs.wav" controls="" preload=""></audio>
             </p>
@@ -617,6 +703,28 @@
             <dt>Targeted Phrase:  at midnight</dt>
             <dt>ASR: Deepspeech</dt>
             </dl>
+        <table>
+          <colgroup>
+            <col width="60" />
+            <col width="120" span="2"/>
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Method</th><th>Speech similarity(%)</th><th>Running time(s)</th><th>SNR(dB)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>GA</td><td>98.7</td><td>4075</td><td>31</td>
+            </tr>
+            <tr>
+              <td>PSO</td><td>94.2</td><td>1467</td><td>22</td>
+            </tr>
+            <tr>
+              <td>DE-gradient</td><td>98.5</td><td>572</td><td>67</td>
+            </tr>
+          </tbody>
+        </table>
     </details></th>
 </tr>
 </table>
@@ -634,7 +742,7 @@
             <p>
                 <audio src="PSO/e_turn%20on%20music_advs.wav" controls="" preload=""></audio>
             </p>
-            <p>HybridDE</p>
+            <p>DE-gradient</p>
             <p>
                 <audio src="DE/e_turn%20on%20music_advs.wav" controls="" preload=""></audio>
             </p>
@@ -648,6 +756,28 @@
             <dt>Targeted Phrase:  turn on music</dt>
             <dt>ASR: Deepspeech</dt>
             </dl>
+        <table>
+          <colgroup>
+            <col width="60" />
+            <col width="120" span="2"/>
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Method</th><th>Speech similarity(%)</th><th>Running time(s)</th><th>SNR(dB)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>GA</td><td>97.8</td><td>794</td><td>27</td>
+            </tr>
+            <tr>
+              <td>PSO</td><td>92.5</td><td>3079</td><td>22</td>
+            </tr>
+            <tr>
+              <td>DE-gradient</td><td>97.9</td><td>849</td><td>53</td>
+            </tr>
+          </tbody>
+        </table>
     </details></th>
 </tr>
 </table>
@@ -665,7 +795,7 @@
             <p>
                 <audio src="PSO/f_look%20over_advs.wav" controls="" preload=""></audio>
             </p>
-            <p>HybridDE</p>
+            <p>DE-gradient</p>
             <p>
                 <audio src="DE/f_look%20over_advs.wav" controls="" preload=""></audio>
             </p>
@@ -679,6 +809,28 @@
             <dt>Targeted Phrase:  look over</dt>
             <dt>ASR: Deepspeech</dt>
             </dl>
+        <table>
+          <colgroup>
+            <col width="60" />
+            <col width="120" span="2"/>
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Method</th><th>Speech similarity(%)</th><th>Running time(s)</th><th>SNR(dB)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>GA</td><td>97.5</td><td>263</td><td>35</td>
+            </tr>
+            <tr>
+              <td>PSO</td><td>91.1</td><td>1887</td><td>27</td>
+            </tr>
+            <tr>
+              <td>DE-gradient</td><td>98.4</td><td>1113</td><td>61</td>
+            </tr>
+          </tbody>
+        </table>
     </details></th>
 </tr>
 </table>
@@ -696,7 +848,7 @@
             <p>
                 <audio src="PSO/g_write%20down_advs.wav" controls="" preload=""></audio>
             </p>
-            <p>HybridDE</p>
+            <p>DE-gradient</p>
             <p>
                 <audio src="DE/g_write%20down_advs.wav" controls="" preload=""></audio>
             </p>
@@ -710,6 +862,28 @@
             <dt>Targeted Phrase:  write down</dt>
             <dt>ASR: Deepspeech</dt>
             </dl>
+        <table>
+          <colgroup>
+            <col width="60" />
+            <col width="120" span="2"/>
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Method</th><th>Speech similarity(%)</th><th>Running time(s)</th><th>SNR(dB)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>GA</td><td>98.6</td><td>1719</td><td>29</td>
+            </tr>
+            <tr>
+              <td>PSO</td><td>96.6</td><td>756</td><td>25</td>
+            </tr>
+            <tr>
+              <td>DE-gradient</td><td>98.8</td><td>993</td><td>65</td>
+            </tr>
+          </tbody>
+        </table>
     </details></th>
 </tr>
 </table>
@@ -727,7 +901,7 @@
             <p>
                 <audio src="PSO/h_turn%20off_advs.wav" controls="" preload=""></audio>
             </p>
-            <p>HybridDE</p>
+            <p>DE-gradient</p>
             <p>
                 <audio src="DE/h_turn%20off_advs.wav" controls="" preload=""></audio>
             </p>
@@ -740,7 +914,29 @@
             <dt>Oraginal Phrase:  What is it, Tom</dt>
             <dt>Targeted Phrase:  turn off</dt>
             <dt>ASR: Deepspeech</dt>
-            </dl>
+            </dl><table>
+          <colgroup>
+            <col width="60" />
+            <col width="120" span="2"/>
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Method</th><th>Speech similarity(%)</th><th>Running time(s)</th><th>SNR(dB)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>GA</td><td>95.2</td><td>356</td><td>25</td>
+            </tr>
+            <tr>
+              <td>PSO</td><td>91.0</td><td>1574</td><td>22</td>
+            </tr>
+            <tr>
+              <td>DE-gradient</td><td>98.9</td><td>932</td><td>49</td>
+            </tr>
+          </tbody>
+        </table>
+
     </details></th>
 </tr>
 </table>
